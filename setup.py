@@ -28,7 +28,7 @@ def get_profile():
     if is_pypy:
         profile = os.environ.get('UWSGI_PROFILE', 'buildconf/pypy.ini')
     else:
-        profile = os.environ.get('UWSGI_PROFILE', 'buildconf/default.ini')
+        profile = os.environ.get('UWSGI_PROFILE', 'buildconf/statsd.ini')
     if not profile.endswith('.ini'):
         profile = "%s.ini" % profile
     if not '/' in profile:
